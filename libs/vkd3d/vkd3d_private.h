@@ -923,7 +923,8 @@ struct d3d12_graphics_pipeline_state
 
     const struct d3d12_root_signature *root_signature;
 
-    struct list compiled_pipelines;
+    VkPipeline pipeline;
+    struct list compiled_fallback_pipelines;
 
     bool xfb_enabled;
 };
